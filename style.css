@@ -1,0 +1,392 @@
+body {
+  background: rgb(230, 230, 237);
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  outline: none;
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.heading-bar {
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  color: #fff;
+}
+
+/* CSS */
+.cta {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.cta:focus {
+  text-decoration: none;
+}
+
+.cta:hover {
+  text-decoration: none;
+}
+
+.cta:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.cta:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .cta {
+    padding: 12px 50px;
+  }
+}
+.pre-header-wrapper ul {
+  display: flex;
+  gap: 1rem;
+  padding: 10px 3%;
+  background-image: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  color: #fff;
+}
+.pre-header-wrapper ul span {
+  color: #000;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 3%;
+  margin-top: -1rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background: #000;
+}
+.header-wrapper .logo a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+.header-wrapper ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: -1px;
+}
+.header-wrapper ul li:nth-child(5) {
+  background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  border-radius: 40px;
+  padding: 10px 20px;
+}
+.header-wrapper ul li:nth-child(5) a {
+  color: #fff;
+}
+.header-wrapper ul li a {
+  color: #fff;
+}
+.header-wrapper .bars {
+  display: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.home-wrapper {
+  background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  position: relative;
+  min-height: 90vh;
+}
+.home-wrapper form {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+.home-wrapper form::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.home-wrapper form::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.home-wrapper form h2 {
+  margin-bottom: 2rem;
+}
+.home-wrapper form .form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.home-wrapper form .form-group input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(67, 67, 67, 0.468);
+  width: 90%;
+  margin: auto;
+}
+.home-wrapper form .button-group button {
+  width: 90%;
+}
+
+.about-wrapper figure {
+  max-width: 100%;
+}
+.about-wrapper figure img {
+  width: 600px;
+  height: 500px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.services-wrapper .card {
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.services-wrapper .card ul li {
+  line-height: 2rem;
+}
+
+.our-work-wrapper .card-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.our-work-wrapper .card-box img {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.our-work-wrapper .card-box img:hover {
+  transform: scale(1.3);
+}
+.our-work-wrapper .card-box .card-box-body {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 20px;
+}
+.our-work-wrapper .card-box .card-box-body h3 {
+  margin-bottom: -2px;
+}
+
+.more-wrapper .card {
+  background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  color: #fff;
+}
+.more-wrapper .card:hover {
+  background: linear-gradient(60.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  cursor: pointer;
+}
+
+.more2-wrapper .card {
+  border-radius: 5px;
+}
+
+.connect-wrapper form {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+}
+.connect-wrapper form .form-group input {
+  border: 1px solid rgba(67, 67, 67, 0.468);
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 10px;
+}
+.connect-wrapper form .form-group .button-group {
+  width: 100%;
+}
+.connect-wrapper form .form-group .button-group button {
+  width: 100%;
+}
+
+.accordian-wrapper {
+  background: #000;
+}
+.accordian-wrapper .accordion-button::after {
+  display: none;
+  font-weight: 500;
+}
+.accordian-wrapper .accordion-button {
+  font-weight: 500;
+}
+.accordian-wrapper form {
+  width: 100%;
+}
+.accordian-wrapper form .form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.accordian-wrapper form .form-group input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(67, 67, 67, 0.468);
+  width: 100%;
+  padding: 5px 10px;
+}
+.accordian-wrapper form .button-group button {
+  width: 100%;
+}
+
+footer,
+.copyright-wrapper {
+  background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
+  color: #fff;
+}
+
+/* tablet & laptop */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+  .header-wrapper ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 16%;
+    background: #3385ff;
+    z-index: 1000;
+    margin-top: -70rem;
+    transition: all 0.5s ease;
+  }
+  .header-wrapper ul li {
+    line-height: 4rem;
+  }
+  .header-wrapper ul li a {
+    color: #fff;
+  }
+  .header-wrapper .bars {
+    display: block;
+  }
+  .header-wrapper .mobile {
+    margin-top: 0rem;
+  }
+}
+/* mobile device */
+/* ipad, tablet */
+/* small screen laptop */
+/* large screen laptop, desktop */
+/* extra large screen tv */
+/* my *//*# sourceMappingURL=style.css.map */

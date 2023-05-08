@@ -1,0 +1,487 @@
+$primaryColor: linear-gradient(108.7deg, rgba(221, 22, 224, 1) 11%, rgba(111, 22, 190, 1) 88.2%);
+$secondryColor: #3385ff;
+$tertiaryColor: linear-gradient(60.7deg, rgba(221, 22, 224, 1) 11%, rgba(111, 22, 190, 1) 88.2%);
+$bgColor: rgb(230, 230, 237);
+$whiteColor: #fff;
+$blackColor: #000;
+$grayColor: rgba(67, 67, 67, 0.468);
+$fiftyPx: 50px;
+$thirtSixPx: 36px;
+$twentyFourPx: 24px;
+$twentyPx: 20px;
+$sixteenPx: 16px;
+$fourteenPx: 14px;
+
+body {
+	background: $bgColor;
+}
+
+@mixin glass {
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 40px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+	font-size: $fiftyPx;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: $thirtSixPx;
+	font-weight: 500;
+}
+h3 {
+	font-size: $twentyFourPx;
+	font-weight: 500;
+}
+p {
+	font-size: $sixteenPx;
+	line-height: 2rem;
+	font-weight: 300;
+}
+
+* {
+	list-style: none;
+	box-sizing: border-box;
+	padding: 0;
+	outline: none;
+	font-family: "Rubik", sans-serif;
+	// border: 1px solid blue;
+}
+
+a {
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+	padding: 1rem;
+	margin-bottom: 4rem;
+}
+
+.heading-bar {
+	padding: 0.8rem;
+	border-radius: 50%;
+	background: $primaryColor;
+	color: $whiteColor;
+}
+
+/* CSS */
+.cta {
+	appearance: button;
+	background-color: #000;
+	background-image: none;
+	border: 1px solid #000;
+	border-radius: 4px;
+	box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	margin: 0 5px 10px 0;
+	overflow: visible;
+	padding: 12px 40px;
+	text-align: center;
+	text-transform: none;
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.cta:focus {
+	text-decoration: none;
+}
+
+.cta:hover {
+	text-decoration: none;
+}
+
+.cta:active {
+	box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+	outline: 0;
+}
+
+.cta:not([disabled]):active {
+	box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+	transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+	.cta {
+		padding: 12px 50px;
+	}
+}
+
+// <!----------------------- pre header start -------------------------------->
+
+.pre-header-wrapper {
+	ul {
+		display: flex;
+		gap: 1rem;
+		padding: 10px 3%;
+		background-image: $primaryColor;
+		color: $whiteColor;
+
+		span {
+			color: $blackColor;
+		}
+	}
+}
+
+// <!-----------------------  header start -------------------------------->
+
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 3%;
+	margin-top: -1rem;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	background: $blackColor;
+	.logo {
+		a {
+			color: $whiteColor;
+			font-weight: 500;
+			font-size: $thirtSixPx;
+		}
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: -1px;
+		li {
+			&:nth-child(5) {
+				background: $primaryColor;
+				border-radius: 40px;
+				padding: 10px 20px;
+				a {
+					color: $whiteColor;
+				}
+			}
+			a {
+				color: $whiteColor;
+			}
+		}
+	}
+	.bars {
+		display: none;
+		font-size: $thirtSixPx;
+		cursor: pointer;
+		color: $whiteColor;
+	}
+}
+
+// <!-----------------------  home start -------------------------------->
+
+.home-wrapper {
+	background: $primaryColor;
+	position: relative;
+	min-height: 90vh;
+
+	form {
+		width: 500px;
+		height: 500px;
+		background-color: $whiteColor;
+		text-align: center;
+		padding: 2rem;
+		border-top-left-radius: 40px;
+		border-bottom-right-radius: 40px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
+		box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -10%;
+			left: -10%;
+			@include glass;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -10%;
+			right: -10%;
+			@include glass;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		h2 {
+			margin-bottom: 2rem;
+		}
+		.form-group {
+			width: 100%;
+			margin-bottom: 1.5rem;
+			input {
+				outline: none;
+				border: none;
+				border-bottom: 1px solid $grayColor;
+				width: 90%;
+				margin: auto;
+			}
+		}
+		.button-group {
+			button {
+				width: 90%;
+			}
+		}
+	}
+}
+
+// <!-----------------------  about start -------------------------------->
+
+.about-wrapper {
+	figure {
+		max-width: 100%;
+
+		img {
+			width: 600px;
+			height: 500px;
+			border-top-left-radius: 40px;
+			border-bottom-right-radius: 40px;
+		}
+	}
+}
+
+// <!-----------------------  services start -------------------------------->
+
+.services-wrapper {
+	.card {
+		border-top-right-radius: 40px;
+		border-bottom-left-radius: 40px;
+		// background: $primaryColor;
+		// color: $whiteColor;
+		ul {
+			li {
+				line-height: 2rem;
+			}
+		}
+	}
+}
+
+// <!-----------------------  our work start -------------------------------->
+
+.our-work-wrapper {
+	.card-box {
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+		img {
+			width: 100%;
+			transition: all 0.5s ease-in-out;
+			&:hover {
+				transform: scale(1.3);
+			}
+		}
+		.card-box-body {
+			position: absolute;
+			bottom: 3%;
+			left: 5%;
+			@include glass;
+			padding: 8px 20px;
+			h3 {
+				margin-bottom: -2px;
+			}
+		}
+	}
+}
+
+// <!-----------------------  more card start -------------------------------->
+
+.more-wrapper {
+	.card {
+		background: $primaryColor;
+		border-radius: 5px;
+		transition: all 0.5s ease;
+		color: $whiteColor;
+		&:hover {
+			background: $tertiaryColor;
+			cursor: pointer;
+		}
+	}
+}
+
+// <!-----------------------  more2 card start -------------------------------->
+
+.more2-wrapper {
+	.card {
+		border-radius: 5px;
+	}
+}
+
+// <!-----------------------  connect start -------------------------------->
+
+.connect-wrapper {
+	form {
+		box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+		width: 400px;
+		height: 400px;
+		display: grid;
+		place-items: center;
+		padding: 1rem;
+		border-radius: 5px;
+		background: $primaryColor;
+		.form-group {
+			input {
+				border: 1px solid $grayColor;
+				outline: none;
+				border-radius: 40px;
+				padding: 5px 10px;
+			}
+			.button-group {
+				width: 100%;
+				button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+// <!-----------------------  accordian start -------------------------------->
+
+.accordian-wrapper {
+	background: $blackColor;
+	.accordion-button::after {
+		display: none;
+		font-weight: 500;
+	}
+
+	.accordion-button {
+		font-weight: 500;
+	}
+	form {
+		width: 100%;
+		.form-group {
+			width: 100%;
+			margin-bottom: 1rem;
+			input {
+				outline: none;
+				border: none;
+				border-bottom: 1px solid $grayColor;
+				width: 100%;
+				padding: 5px 10px;
+			}
+		}
+		.button-group {
+			button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// <!-----------------------  footer start -------------------------------->
+footer,
+.copyright-wrapper {
+	background: $primaryColor;
+	color: $whiteColor;
+}
+
+// <!-----------------------  media query part start -------------------------------->
+
+/* tablet & laptop */
+
+@media screen and (max-width: 768px) {
+	// universal styling
+	h1 {
+		font-size: $thirtSixPx;
+	}
+
+	h2 {
+		font-size: $twentyFourPx;
+		font-weight: 500;
+	}
+	h3 {
+		font-size: $twentyPx;
+	}
+	p {
+		font-size: $fourteenPx;
+		line-height: 2rem;
+		font-weight: 300;
+	}
+
+	// header section
+
+	.header-wrapper {
+		ul {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			right: 0;
+			top: 16%;
+			background: $secondryColor;
+			z-index: 1000;
+			margin-top: -70rem;
+			transition: all 0.5s ease;
+			li {
+				line-height: 4rem;
+				a {
+					color: $whiteColor;
+				}
+			}
+		}
+
+		.bars {
+			display: block;
+		}
+
+		.mobile {
+			margin-top: 0rem;
+		}
+	}
+}
+// home section
+
+/* mobile device */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+/* ipad, tablet */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/* small screen laptop */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* large screen laptop, desktop */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* extra large screen tv */
+
+@media screen and (min-width: 1201px) and (max-width: 1800px) {
+}
+
+/* my */
+
+@media screen and (min-width: 746px) and (max-width: 1536px) {
+}
