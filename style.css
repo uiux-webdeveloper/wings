@@ -315,6 +315,10 @@ a {
 .testimonial-wrapper .testimonial-container .testimonial-card article h3 {
   margin-top: 0.5rem;
 }
+.testimonial-wrapper .testimonial-container .testimonial-card article span {
+  letter-spacing: 0.4rem;
+  font-weight: 300;
+}
 .testimonial-wrapper .testimonial-container .slick-prev,
 .testimonial-wrapper .testimonial-container .slick-next {
   filter: opacity(0);
