@@ -289,6 +289,37 @@ a {
   border-radius: 5px;
 }
 
+.testimonial-wrapper .testimonial-container .testimonial-card {
+  position: relative;
+  padding: 0 1.8rem;
+}
+.testimonial-wrapper .testimonial-container .testimonial-card:hover img {
+  filter: grayscale(50%);
+}
+.testimonial-wrapper .testimonial-container .testimonial-card:hover article {
+  bottom: 5%;
+  cursor: pointer;
+}
+.testimonial-wrapper .testimonial-container .testimonial-card img {
+  border-radius: 5px;
+  width: 100%;
+  border: 10px solid #fff;
+}
+.testimonial-wrapper .testimonial-container .testimonial-card article {
+  position: absolute;
+  left: 15%;
+  bottom: -20%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.testimonial-wrapper .testimonial-container .testimonial-card article h3 {
+  margin-top: 0.5rem;
+}
+.testimonial-wrapper .testimonial-container .slick-prev,
+.testimonial-wrapper .testimonial-container .slick-next {
+  filter: opacity(0);
+}
+
 .connect-wrapper form {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   width: 400px;
