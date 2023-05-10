@@ -157,7 +157,6 @@ a {
 .home-wrapper {
   background: linear-gradient(108.7deg, rgb(221, 22, 224) 11%, rgb(111, 22, 190) 88.2%);
   position: relative;
-  min-height: 90vh;
   overflow: hidden;
 }
 .home-wrapper form {
@@ -241,9 +240,7 @@ a {
 .services-wrapper .card {
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
-}
-.services-wrapper .card ul li {
-  line-height: 2rem;
+  height: 100%;
 }
 
 .our-work-wrapper .card-box {
@@ -289,6 +286,9 @@ a {
   border-radius: 5px;
 }
 
+.testimonial-wrapper {
+  overflow: hidden;
+}
 .testimonial-wrapper .testimonial-container .testimonial-card {
   position: relative;
   padding: 0 1.8rem;
